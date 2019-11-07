@@ -1,0 +1,14 @@
+<skeleton selector="skeleton" loading="chiaroscuro" wx:if="{{showSkeleton}}"></skeleton>
+<!--index.wxml-->
+<view class=" container skeleton">
+  <!-- 图片 -->
+  <image class="userinfo-avatar skeleton-radius" src="{{image}}" mode="cover"></image>
+  <!-- 文字 -->
+  <text class="user-motto skeleton-rect">{{motto}}</text>
+  <!-- 列表 -->
+  <view class="jokes">
+    <view class="joke skeleton-rect" wx:for="{{jokes}}" wx:key="{{index}}">
+      {{index+1}} - {{item.joke}}
+    </view>
+  </view>
+</view>
