@@ -23,8 +23,6 @@
       "./typings"
     ]
   },
-  "include": [
-    "./src/**/*.ts"
-  ],
+  "include": ["./**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

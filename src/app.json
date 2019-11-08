@@ -5,7 +5,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Skeleton DEMO",
+    "navigationBarTitleText": "wxapp-best-practices",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

@@ -1,7 +1,5 @@
 // index.ts
 // 获取应用实例
-const app = getApp<IAppOption>()
-
 Page({
   data: {
     motto: 'Hello World',
@@ -19,24 +17,25 @@ Page({
         "joke": "According to the Encyclopedia Brittanica, the Native American &quot"
       }
     ],
-    image: "https://avatars0.githubusercontent.com/u/28595171",
+    avatar: "https://avatars0.githubusercontent.com/u/28595171",
     showSkeleton: true
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs',
+  togglePreview() {
+    this.setData({
+      showSkeleton: !this.data.showSkeleton
     })
   },
   onLoad() {
-    wx.request({
-      url: 'http://api.icndb.com/jokes/random/5',
-      success: (res: any) => {
-        this.setData({
-          showSkeleton: false,
-          jokes: res.data.value
-        })
-      }
-    })
+    setTimeout(() => {
+      wx.request({
+        url: 'http://api.icndb.com/jokes/random/5',
+        success: (res: any) => {
+          this.setData({
+            showSkeleton: false,
+            jokes: res.data.value
+          })
+        }
+      })
+    }, 2000)
   }
 })
