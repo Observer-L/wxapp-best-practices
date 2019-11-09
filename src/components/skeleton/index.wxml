@@ -1,9 +1,16 @@
 <view
-  style="width: {{systemInfo.width}}px; height: {{systemInfo.height}}px; position: absolute; left:0; top:0; z-index:9998; overflow: hidden;">
-  <view wx:for="{{skeletonRectLists}}" wx:key="{{index}}" class="{{loading}}"
-    style="width: {{item.width}}px; height: {{item.height}}px; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
+  class="skeleton"
+  style="width: {{systemInfo.width}}px; height: {{systemInfo.height}}px;">
+  <view 
+    wx:for="{{skeletonRectLists}}" 
+    wx:key="{{index}}" 
+    class="{{loading}}"
+    style="width: {{item.width}}px; height: {{item.height}}px; left: {{item.left}}px; top: {{item.top}}px">
   </view>
-  <view wx:for="{{skeletonCircleLists}}" wx:key="{{index}}" class="skeleton__item_circle {{loading}}"
-    style="width: {{item.width}}px; height: {{item.height}}px;  border-radius: {{item.width}}px; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
+  <view 
+    wx:for="{{skeletonCircleLists}}" 
+    wx:key="{{index}}"
+    class="{{loading}}"
+    style="width: {{item.width}}px; height: {{item.height}}px; border-radius: {{item.width}}px; left: {{item.left}}px; top: {{item.top}}px">
   </view>
 </view>
