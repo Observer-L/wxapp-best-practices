@@ -1,0 +1,15 @@
+<skeleton loading="flush" wx:if="{{showSkeleton}}"></skeleton>
+<!--index.wxml-->
+<view class=" container skeleton">
+  <!-- 图片 -->
+  <image class="userinfo-avatar skeleton-radius" src="{{avatar}}" mode="cover"></image>
+  <!-- 文字 -->
+  <text class="user-motto skeleton-rect">{{motto}}</text>
+  <!-- 列表 -->
+  <view class="list">
+    <view class="skeleton-rect" wx:for="{{jokes}}" wx:key="{{item.id}}">
+      {{index+1}} - {{item.joke}}
+    </view>
+  </view>
+  <button class="btn-action" bindtap="togglePreview">预览效果</button>
+</view>

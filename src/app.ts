@@ -2,4 +2,4 @@
 App<IAppOption>({
   globalData: {},
   onLaunch() {}
-})
+}) 

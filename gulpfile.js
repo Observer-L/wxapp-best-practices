@@ -10,7 +10,7 @@ const minifyJs = composer(uglifyjs, console);
 const tsProject = $.typescript.createProject("tsconfig.json");
 
 /* 文件路径 */
-const distPath = "./dist";
+const distPath = "dist";
 const wxmlFiles = "src/**/*.wxml";
 const lessFiles = ["src/**/!(_)*.less"];
 const jsonFiles = "src/**/*.json";
@@ -29,7 +29,7 @@ const isProd = process.env.NODE_ENV === "production";
  * @description 清空非npm构建包dist目录文件
  */
 gulp.task("clean", () => {
-  return del(distPath);
+  return del("dist/**");
 });
 
 /**
