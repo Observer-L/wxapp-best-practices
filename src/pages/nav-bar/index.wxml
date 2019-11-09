@@ -1,0 +1,4 @@
+<view>
+  <nav-bar title="自定义导航栏" showHome="{{true}}" showBack="{{true}}" showSearchBar="{{true}}" showBorder="{{true}}">
+  </nav-bar>
+</view>

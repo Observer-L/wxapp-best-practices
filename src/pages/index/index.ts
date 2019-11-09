@@ -1,15 +1,13 @@
-// index.ts
-// 获取应用实例
+declare const __wxConfig: any
+const components = __wxConfig.pages.slice(1).map((i:string) => {
+  return {
+    name: i.split('/')[1]
+  }
+})
+
 Page({
   data: {
-    components: [
-      {
-        name: 'skeleton'
-      },
-      {
-        name: 'lazy-load'
-      }
-    ]
+    components
   },
   navigate(e:any) {
     wx.navigateTo({
@@ -18,6 +16,3 @@ Page({
   },
   onLoad() {}
 })
-
-// declare const __wxConfig: any;
-// console.log(__wxConfig);

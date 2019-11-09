@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/skeleton/index",
-    "pages/lazy-load/index"
+    "pages/lazy-load/index",
+    "pages/nav-bar/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,55 @@
+page {
+  background: #f8f8f8;
+}
+
+.container {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  background: #fff;
+  > view {
+    position: relative;
+    top: -2px;
+  }
+  &.border {
+    box-shadow: 0 -4px 8px #d8d8d8;
+  }
+}
+
+.left-menu {
+  display: flex;
+  box-shadow: 0 0 1px #d1d1d1;
+  border-radius: 24px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: space-around;
+  .btn {
+    width: 1.4rem;
+    height: 1.4rem;
+    text-align: center;
+  }
+  .split-line {
+    width: 1px;
+    height: 60%;
+    background-color: #eee;
+  }
+}
+
+.mid {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+  .search-bar {
+    height: 100%;
+    background: #eee;
+    border-radius: 12px;
+    color: #aaa;
+    font-size: .8rem;
+    &.hover {
+      background: #d8d8d8;
+    }
+  }
+}

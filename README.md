@@ -13,6 +13,7 @@
 
 - [x] [skeleton screen](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/skeleton)
 - [x] [lazy-load](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/lazy-load)（intersectionObserver）
+- [x] [custom nav bar](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/nav-bar)
 - [ ] parallax
 ...
 
