@@ -11,8 +11,8 @@
 
 ## ⚡️ 组件列表
 
-- [x] [skeleton screen](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/lazy-load)
-- [x] [lazy-load](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/skeleton)（intersectionObserver）
+- [x] [skeleton screen](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/skeleton)
+- [x] [lazy-load](https://github.com/Observer-L/wxapp-best-practices/tree/master/src/components/lazy-load)（intersectionObserver）
 - [ ] parallax
 ...
 
