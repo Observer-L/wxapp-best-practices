@@ -87,21 +87,21 @@ module.exports = {
     ],
     "no-useless-constructor": "warn",
     "prefer-const": "warn",
-    "prefer-destructuring": [
-      "warn",
-      {
-        AssignmentExpression: {
-          array: false,
-          object: false
-        },
-        VariableDeclarator: {
-          array: false,
-          object: true
-        }
-      },
-      {
-        enforceForRenamedProperties: false
-      }
-    ]
+    // "prefer-destructuring": [
+    //   "warn",
+    //   {
+    //     AssignmentExpression: {
+    //       array: false,
+    //       object: false
+    //     },
+    //     VariableDeclarator: {
+    //       array: false,
+    //       object: true
+    //     }
+    //   },
+    //   {
+    //     enforceForRenamedProperties: false
+    //   }
+    // ]
   }
 };

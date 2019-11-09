@@ -238,8 +238,7 @@ const create = done => {
     .src(path.join(root, source, "*.*"))
     .pipe(
       $.rename({
-        dirname: name,
-        basename: name
+        dirname: name
       })
     )
     .pipe(gulp.dest(path.join("src", type)));

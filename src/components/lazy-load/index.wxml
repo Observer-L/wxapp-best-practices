@@ -1,0 +1,5 @@
+<view class="container">
+  <view wx:for="{{images}}" wx:key="{{index}}">
+    <image src="{{item.show ? item.src : placeholder}}" class="pic item-{{index}}" />
+  </view>
+</view>
