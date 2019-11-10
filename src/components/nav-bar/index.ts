@@ -1,8 +1,10 @@
 Component({
+  options: {
+    multipleSlots: true 
+  },
   properties: {
     title: {
-      type: String,
-      value: 'default title'
+      type: String
     },
     showHome: {
       type: Boolean,
@@ -19,6 +21,18 @@ Component({
     showBack: {
       type: Boolean,
       value: true
+    },
+    backgroundColor: {
+      type: String,
+      value: '#FFF'
+    },
+    color: {
+      type: String,
+      value: '#000'
+    },
+    searchPlaceholder: {
+      type: String,
+      value: '搜索一下'
     }
   },
   data: {
@@ -26,8 +40,6 @@ Component({
   },
   lifetimes: {
     attached() {
-      console.log(wx.getMenuButtonBoundingClientRect());
-      
       this.setData({
         bounding: wx.getMenuButtonBoundingClientRect()
       })
@@ -37,17 +49,18 @@ Component({
     navigate(e:any) {
       const target = e.target.dataset.id;
       if (target === 'search') {
-        wx.showToast({
-          title: '跳转到搜索页'
+        this.triggerEvent('search')
+      } else if (target === 'home') {
+        this.triggerEvent('home')
+        wx.navigateBack({
+          delta: getCurrentPages().length
         })
-        // wx.redirectTo({
-        //   url: '/pages/search/index'
-        // })
-        return;
+      } else if (target === 'back') {
+        this.triggerEvent('back')
+        wx.navigateBack({
+          delta: 1
+        })
       }
-      wx.navigateBack({
-        delta: target === 'home' ? getCurrentPages().length : 1
-      })
     }
   }
 })

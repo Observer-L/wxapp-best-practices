@@ -1,4 +1,18 @@
-<view>
-  <nav-bar title="自定义导航栏" showHome="{{true}}" showBack="{{true}}" showSearchBar="{{true}}" showBorder="{{true}}">
+<view class="container">
+  <nav-bar 
+    bindback="handleBack" 
+    bindhome="handleBackHome" 
+    bindsearch="handleSearch" 
+    searchPlaceholder="点我搜索"
+    color="#000" 
+    backgroundColor="#fff"
+    title="自定义导航栏" 
+    showHome="{{true}}" 
+    showBack="{{true}}" 
+    showSearchBar="{{true}}"
+    showBorder="{{true}}"
+  >
+  <!-- <view slot="left">left slot</view> -->
+  <!-- <view slot="center">center slot</view> -->
   </nav-bar>
 </view>

@@ -1,3 +1,5 @@
+@import url('../../assets/styles/iconfont');
+
 page {
   background: #f8f8f8;
 }
@@ -9,7 +11,6 @@ page {
   left: 0;
   width: 100vw;
   box-sizing: border-box;
-  background: #fff;
   > view {
     position: relative;
     top: -2px;
@@ -26,10 +27,10 @@ page {
   margin-left: 10px;
   align-items: center;
   justify-content: space-around;
+  background: rgba(255,255,255,.68);
   .btn {
-    width: 1.4rem;
-    height: 1.4rem;
     text-align: center;
+    font-size: 1.6rem;
   }
   .split-line {
     width: 1px;
@@ -48,6 +49,9 @@ page {
     border-radius: 12px;
     color: #aaa;
     font-size: .8rem;
+    > i {
+      font-size: 1rem;
+    }
     &.hover {
       background: #d8d8d8;
     }

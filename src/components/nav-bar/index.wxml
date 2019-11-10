@@ -1,22 +1,19 @@
-<view 
-  class="container {{showBorder ? 'border' : ''}}" 
-  style="padding-top: {{bounding.top}}px; padding-right: {{bounding.width + 10}}px; height: {{bounding.top + bounding.height + 6}}px;"
->
-  <view 
-    class="left-menu"
-    wx:if="{{showBack || showHome}}" 
-    style="width: {{showBack && showHome ? bounding.width * .8 : bounding.width / 2}}px; height: {{bounding.height * .9}}px;"
-  >
-    <image class="btn btn-back" wx:if="{{showBack}}" bindtap="navigate" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAYklEQVRIie3WMQqDUBBF0UP2oMT9L8VOU8XC5WjhL0IqweQr8u4C5sAUw5DS/lq80NdGJywYaqEN3gWd8QwaNOjlUBgLOtmOxeEevxjyz75X3QUPHvx2+Cmvzyde/dlL120FI6M4vKiDCSkAAAAASUVORK5CYII=" />
+<view class="container {{showBorder ? 'border' : ''}}"
+  style="background-color: {{backgroundColor}};padding-top: {{bounding.top}}px; padding-right: {{bounding.width + 10}}px; height: {{bounding.top + bounding.height + 6}}px;">
+  <slot wx:if="{{!showBack}}" name="left"></slot>
+  <view class="left-menu" wx:if="{{showBack || showHome}}"
+    style="width: {{showBack && showHome ? bounding.width * .8 : bounding.width / 2}}px; height: {{bounding.height}}px;">
+    <i class="iconfont icon-arrow-lift btn btn-back" wx:if="{{showBack}}" bindtap="navigate" data-id="back"></i>
     <span class="split-line" wx:if="{{showBack && showHome}}"></span>
-    <image class="btn btn-home" wx:if="{{showHome}}" bindtap="navigate" data-id="home" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAA4UlEQVRIie2VMQrCMBhGX6Wj4OINPIAncHPQA7g5ewWv4O7oHdycHcRrKNguIm5OotahKcRa0zZJK2gefFCS/HnwJyXgKEYH2AM78V0LPeAIRCJnoC/Nb8X4xqZ0AlwlaZIbMBVr5HFjfGCeIUxnYVPcBtYFpFnRpkt8iXSk2uIRcDGQRsC4jNAjvih3Q2kEPIAZ0MiTNoGlBWE6K6ClEocVSJMEsijdglNeSwx42dv7sMjKz6/y5B56VXxN7GvUWDme/2u1Eztx7eJQUVP20Q8Uc28MRYHpi3QABmXEjt/hCRcxqi97h4pfAAAAAElFTkSuQmCC" />
+    <i class="iconfont icon-home-fill btn btn-home" wx:if="{{showHome}}" bindtap="navigate" data-id="home"></i>
   </view>
-  <view 
-    class="mid" 
+  <slot wx:if="{{!showSearchBar && !title}}" name="center"></slot>
+  <view class="mid"
     style="height: {{bounding.height * .8}}px; line-height: {{bounding.height * .8}}px; margin-right: {{!showBack && !showHome && !showSearchBar ? -bounding.width : 10}}px; ">
-    <view class="title" wx:if="{{!showSearchBar}}">{{title}}</view>
+    <view class="title" wx:if="{{!showSearchBar}}" style="color: {{color}}">{{title}}</view>
     <view wx:else class="search-bar" hover-class="hover" bindtap="navigate" data-id="search">
-      搜点什么~
+      <i class="iconfont icon-search"></i>
+      {{searchPlaceholder}}
     </view>
   </view>
 </view>
