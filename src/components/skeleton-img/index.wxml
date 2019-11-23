@@ -1,0 +1,1 @@
+<view class="flush skeleton-class {{static ? 'static' : ''}}"></view>

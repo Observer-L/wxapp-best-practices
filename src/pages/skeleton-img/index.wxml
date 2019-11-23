@@ -1,0 +1,3 @@
+<view>
+  <skeleton-img-template wx:if="{{showSkeleton}}"></skeleton-img-template>
+</view>

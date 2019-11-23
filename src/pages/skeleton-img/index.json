@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "skeleton-img-template": "../../components/skeleton-img-template/index"
+  }
+}

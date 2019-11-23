@@ -1,0 +1,40 @@
+@avatarSize: 30px;
+
+page {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+}
+
+.head {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  width: @avatarSize;
+  height: @avatarSize; 
+  border-radius: 50%;
+  margin-right: @avatarSize / 3;
+}
+
+.info {
+  height: @avatarSize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: @avatarSize * 2;
+  height: @avatarSize / 3;
+  &.long {
+    width: @avatarSize * 3;
+  }
+}

@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/nav-bar/index",
     "pages/index/index",
+    "pages/nav-bar/index",
     "pages/skeleton/index",
+    "pages/skeleton-img/index",
     "pages/lazy-load/index"
   ],
   "window": {

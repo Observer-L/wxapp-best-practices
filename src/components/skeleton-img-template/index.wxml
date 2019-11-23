@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="head">
+    <skeleton-img skeleton-class="avatar" static="{{true}}"></skeleton-img>
+    <view class="info">
+      <skeleton-img skeleton-class="line long" static="{{true}}"></skeleton-img>
+      <skeleton-img skeleton-class="line" static="{{true}}"></skeleton-img>
+    </view>
+  </view>
+  <skeleton-img></skeleton-img>
+</view>
